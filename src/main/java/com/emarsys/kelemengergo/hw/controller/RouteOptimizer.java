@@ -64,7 +64,7 @@ public class RouteOptimizer {
         sortedDestinations.add(destination);
     }
 
-    private void destinationsDependenciesAreValid() {
+    private void destinationsDependenciesAreValid() throws NullPointerException, IllegalArgumentException {
         for (Destination dest : destinations) {
             if (dest.hasDependency()) {
                 Destination dependency = dest.getDependency();
